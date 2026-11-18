@@ -1,0 +1,359 @@
+:root {
+  color-scheme: dark;
+  --fondo: #000;
+  --texto: #fff;
+  --linea: #3a3a3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 1rem/1.65 Arial, sans-serif;
+}
+
+.contenedor {
+  width: min(90%, 1030px);
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 14px;
+  line-height: 1.14;
+}
+
+h1 {
+  font: normal clamp(2.45rem, 6.6vw, 5.25rem)/1.02 Georgia, serif;
+  letter-spacing: -.045em;
+}
+
+h2 {
+  font: normal clamp(1.65rem, 3vw, 2.25rem)/1.14 Georgia, serif;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  max-width: 66ch;
+  margin: 0 0 15px;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 5px;
+}
+
+:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+.salto {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform: translateY(-150%);
+  background: black;
+}
+
+.salto:focus {
+  transform: translateY(0);
+}
+
+.cabecera {
+  border-bottom: 1px solid var(--linea);
+}
+
+.barra,
+.pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  padding-block: 18px;
+}
+
+.marca {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.marca span {
+  margin-inline: 3px;
+  font-weight: normal;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  padding: 3px 0;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  border-bottom-color: white;
+}
+
+footer {
+  border-top: 1px solid var(--linea);
+  font-size: .9rem;
+}
+
+.presentacion {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 285px);
+  align-items: center;
+  gap: clamp(20px, 8vw, 90px);
+  padding-block: clamp(36px, 8vw, 90px);
+}
+
+.intro {
+  padding-block: clamp(36px, 7vw, 70px) 36px;
+}
+
+.rotulo {
+  font-size: .84rem;
+  margin-bottom: 15px;
+}
+
+.bajada {
+  font-size: clamp(1.12rem, 2.25vw, 1.4rem);
+}
+
+figure {
+  margin: 0;
+}
+
+.retrato img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter .25s ease;
+}
+
+.retrato img:hover {
+  filter: grayscale(0);
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: .88rem;
+}
+
+.retrato figcaption {
+  text-align: right;
+}
+
+.enlace-principal {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: bold;
+}
+
+.enlace-principal span {
+  transition: transform .2s ease;
+}
+
+.enlace-principal:hover span {
+  transform: translate(3px, -3px);
+}
+
+.seccion {
+  border-top: 1px solid var(--linea);
+  padding-block: 26px 32px;
+}
+
+.dossier {
+  display: grid;
+  grid-template-columns: minmax(155px, .65fr) minmax(0, 2fr);
+  gap: 12px 35px;
+}
+
+.indice,
+.atajos {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.indice a {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--linea);
+  text-decoration: none;
+}
+
+.indice a:hover {
+  text-decoration: underline;
+}
+
+.atajos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-block: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 12px 8px 0;
+  border-bottom: 1px solid var(--linea);
+  vertical-align: top;
+}
+
+.pasos {
+  padding-left: 24px;
+}
+
+.pasos li {
+  max-width: 68ch;
+  padding: 0 0 12px 4px;
+}
+
+.esquema img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.esquema {
+  max-width: 900px;
+}
+
+.ficha {
+  display: grid;
+  grid-template-columns: minmax(130px, .65fr) minmax(0, 2fr);
+  gap: 6px 24px;
+  border-top: 1px solid var(--linea);
+  padding-block: 13px;
+}
+
+.ficha h3,
+.ficha p {
+  margin: 0;
+}
+
+.ficha:target {
+  border-top-color: white;
+}
+
+.casos dt {
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.casos dd {
+  margin: 3px 0 14px;
+  max-width: 68ch;
+}
+
+form {
+  max-width: 680px;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+  margin-block: 18px;
+}
+
+.completo {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 8px;
+  background: #0d0d0d;
+  color: white;
+  border: 1px solid #777;
+  font: inherit;
+}
+
+.boton {
+  padding: 8px 15px;
+  color: white;
+  background: #000;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  font: inherit;
+  transition: background-color .2s ease;
+}
+
+.boton:hover {
+  background: #303030;
+}
+
+#estado:empty {
+  margin: 0;
+}
+
+#contenido {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 620px) {
+  .presentacion,
+  .dossier,
+  .ficha,
+  .campos {
+    grid-template-columns: 1fr;
+  }
+
+  .presentacion {
+    gap: 23px;
+  }
+
+  .retrato {
+    max-width: 230px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boton,
+  .enlace-principal span,
+  .retrato img {
+    transition: none;
+  }
+
+}

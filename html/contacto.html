@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Datos de contacto y formulario para consultas sobre el perfil o trabajos de telecomunicaciones.">
+  <meta name="theme-color" content="#000000">
+  <meta name="author" content="Edison Quispe Crisóstomo">
+  <title>Contacto | Edison Quispe Crisóstomo</title>
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/formulario.js" defer></script>
+</head>
+<body>
+  <a class="salto" href="#contenido">Ir al contenido</a>
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="../index.html">Edison Quispe <span> / </span> Telecomunicaciones</a>
+      <nav aria-label="Navegación principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../html/experiencia.html">Experiencia</a>
+      <a href="../html/contacto.html" aria-current="page">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" class="contenedor">
+    <section class="intro">
+      <h1>Contacto</h1>
+      <p class="bajada">Si tienes una consulta sobre mi experiencia en campo, coordinación de trabajos o estudios, puedes escribirme por correo o probar el formulario de esta página.</p>
+      <p><a href="mailto:edisonquispe356@gmail.com">edisonquispe356@gmail.com</a> · <a href="tel:+51910673532">910 673 532</a></p>
+    </section>
+    <section class="seccion panel-contacto">
+      <h2>Formulario de consulta</h2>
+      <p id="ayuda">Formulario de prueba. La consulta se registra en el navegador, sin enviar correos.</p>
+      <form id="consulta" aria-describedby="ayuda">
+        <div class="campos">
+          <div><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" required autocomplete="name" maxlength="80"></div>
+          <div><label for="correo">Correo electrónico</label><input id="correo" name="correo" type="email" required autocomplete="email" maxlength="120"></div>
+          <div class="completo"><label for="tema">Tema</label><select id="tema" name="tema" required>
+            <option value="">Selecciona un tema</option><option>Redes y telecomunicaciones</option><option>Coordinación de trabajos</option><option>Diseño web y estudios</option><option>Otro</option>
+          </select></div>
+          <div class="completo"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5" required maxlength="1000"></textarea></div>
+        </div>
+        <button class="boton" type="submit" disabled>Enviar</button>
+        <noscript><p>Activa JavaScript para probar el formulario.</p></noscript>
+        <p id="estado" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="contenedor pie">
+      <span>Edison Quispe Crisóstomo</span>
+      <span>Diseño Web / PA2</span>
+    </div>
+  </footer>
+</body>
+</html>
